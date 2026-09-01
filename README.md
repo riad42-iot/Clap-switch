@@ -38,12 +38,12 @@ flowchart TD
     C --> D[Monitor Sound Level]
     D --> E{Clap 1 Detected?}
     E -->|No| D
-    E -->|Yes| F[Start Debounce Timer (200ms)]
-    F --> G[Ignore Noise for 200ms]
+    E -->|Yes| F["Start Debounce Timer (200ms)"]
+    F --> G["Ignore Noise for 200ms"]
     G --> H{Clap 2 Detected?}
     H -->|No| I[Reset & Listen]
     H -->|Yes| J[Valid Double-Clap]
     I --> D
     J --> K[Toggle Relay State]
-    K --> L[LED Feedback on State Change]
+    K --> L["LED Feedback on State Change"]
     L --> D
